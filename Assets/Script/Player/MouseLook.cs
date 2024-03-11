@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public static MouseLook instance;
+    //public static MouseLook instance;
 
     [Header("Settings")]
     public Vector2 clampInDegrees = new Vector2(360, 180);
@@ -28,8 +29,6 @@ public class MouseLook : MonoBehaviour
 
     void Start()
     {
-        instance = this;
-
         // Set target direction to the camera's initial orientation.
         targetDirection = transform.localRotation.eulerAngles;
 
